@@ -1,6 +1,6 @@
 package Labs;
 
-import solutions.pack4.MyLinkedListTricky;
+import solutions.pack4.MyLinkedListTricky_661111;
 
 public class Lab4b_TrickyLinkedList {
         public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Lab4b_TrickyLinkedList {
     }
     static void q1() {
         int [] d = {10,20,30,40,50};
-        MyLinkedListTricky mList = new MyLinkedListTricky();
+        MyLinkedListTricky_661111 mList = new MyLinkedListTricky_661111();
         mList.add(d);
         System.out.println("before -> " + mList);
         mList.q1_rotate_counter_clockwise(1);
@@ -29,7 +29,7 @@ public class Lab4b_TrickyLinkedList {
     }
     static void q2() {
         int [] d = {1,2,3,4,5,6,7,8};
-        MyLinkedListTricky mList = new MyLinkedListTricky();
+        MyLinkedListTricky_661111 mList = new MyLinkedListTricky_661111();
         mList.add(d);
         System.out.println("before -> " + mList);
         mList.q2_reverse();
@@ -37,13 +37,13 @@ public class Lab4b_TrickyLinkedList {
     }
     static void q3() {
         int [] d = {13, 11, 4, 15, 4};
-        MyLinkedListTricky mList = new MyLinkedListTricky();
+        MyLinkedListTricky_661111 mList = new MyLinkedListTricky_661111();
         mList.add(d);
         System.out.println("before -> " + mList);
         mList.q3_remove_dup();
         System.out.println("after  -> " + mList);
         int [] e = {13, 11, 15, 4};
-        mList = new MyLinkedListTricky();
+        mList = new MyLinkedListTricky_661111();
         mList.add(e);
         System.out.println("before -> " + mList);
         mList.q3_remove_dup();
@@ -51,7 +51,7 @@ public class Lab4b_TrickyLinkedList {
     }
     static void q4() {
         int [] d1 = {1, 9, 9, 9};
-        MyLinkedListTricky mList = new MyLinkedListTricky();
+        MyLinkedListTricky_661111 mList = new MyLinkedListTricky_661111();
         mList.add(d1);
         System.out.println("before -> " + mList);
         mList.q4_add_one();
@@ -61,17 +61,17 @@ public class Lab4b_TrickyLinkedList {
     static void q5() {
         int [] d = {21, 33, 33, 21};
         boolean isPalind;
-        MyLinkedListTricky mList = new MyLinkedListTricky();
+        MyLinkedListTricky_661111 mList = new MyLinkedListTricky_661111();
         mList.add(d);
         isPalind = mList.q5_isPalindrome();
         System.out.println(mList + " isPalindrome() = " + isPalind);
         int [] e = {21, 33, 44, 33, 21};
-        mList = new MyLinkedListTricky();
+        mList = new MyLinkedListTricky_661111();
         mList.add(e);
         isPalind = mList.q5_isPalindrome();
         System.out.println(mList + " isPalindrome() = " + isPalind);
         int [] f = {1, 9, 9, 9};
-        mList = new MyLinkedListTricky();
+        mList = new MyLinkedListTricky_661111();
         mList.add(f);
         isPalind = mList.q5_isPalindrome();
         System.out.println(mList + " isPalindrome() = " + isPalind);

@@ -1,6 +1,6 @@
 package solutions.pack4;
 
-public class MyLinkedListTricky extends MyLinkedList_661111 {
+public class MyLinkedListTricky_661111 extends MyLinkedList_661111 {
     public void q1_rotate_counter_clockwise(int k) {
         if (head == null) return;
         Node p = head;
