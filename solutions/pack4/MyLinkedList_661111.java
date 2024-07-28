@@ -1,7 +1,7 @@
 package solutions.pack4;
 
 public class MyLinkedList_661111 {
-    public class Node {
+    public static class Node {
         int data;
         Node next;
         public Node(int d) {

@@ -1,4 +1,5 @@
 package solutions.pack4;
+import java.util.*;
 
 public class MyLinkedListTricky_661111 extends MyLinkedList_661111 {
     public void q1_rotate_counter_clockwise(int k) {
@@ -74,36 +75,24 @@ public class MyLinkedListTricky_661111 extends MyLinkedList_661111 {
 
     public boolean q5_isPalindrome() {
         Node p = head;
-        Node q = head;
-        Node prev = new Node(0);
-        prev.next = head;
-        while (q != null && q.next != null) {
-            prev = prev.next;
-            p = p.next;
-            q = q.next.next;
-        }
-        Node mid = p;
-        Node midNext = p.next;
-        mid.next = null;
-        Node prev2 = null;
-        Node current = midNext;
-        Node next = null;
-        while (current != null) {
-            next = current.next;
-            current.next = prev2;
-            prev2 = current;
-            current = next;
-        }
-        Node p1 = head;
-        Node p2 = prev2;
-        while (p1 != null && p2 != null) {
-            if (p1.data != p2.data) {
-                return false;
-            }
-            p1 = p1.next;
-            p2 = p2.next;
-        }
-        return true;
-    }
+        boolean isPalindrome = true;
+        Stack<Integer> stack = new Stack<Integer>();
 
+        while (p != null) {
+            stack.push(p.data);
+            p = p.next;
+        }
+
+        p = head;
+
+        while (p != null) {
+            int i = stack.pop();
+            if (p.data != i) {
+                isPalindrome = false;
+                break;
+            }
+            p = p.next;
+        }
+        return isPalindrome;
+    }
 }

@@ -50,16 +50,14 @@ public class MyArray_661111 extends MyArrayBasic {
     public int[] expandByK(int k) {
         int newMaxSize = data.length * k;
         int[] newData = new int[newMaxSize];
-        for (int i = 0; i < size; i++) {
-            newData[i] = data[i];
-        }
+        if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
         data = newData;
         MAX_SIZE = newMaxSize;
         return data;
     }
 
     public int[] expand() {
-        return expandByK(2); // Default k = 2, which means doubling the array size
+        return expandByK(2);
     }
 
     @Override

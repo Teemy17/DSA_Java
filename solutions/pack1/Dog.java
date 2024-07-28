@@ -1,8 +1,8 @@
 package solutions.pack1;
 
 public class Dog {
-    private Breed breed;
-    private int weight;
+    private final Breed breed;
+    private final int weight;
     public Dog(Breed breed, int weight) {
         this.breed = breed;
         this.weight = weight;
