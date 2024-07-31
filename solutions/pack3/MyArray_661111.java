@@ -46,7 +46,6 @@ public class MyArray_661111 extends MyArrayBasic {
     }
 
 
-
     public int[] expandByK(int k) {
         int newMaxSize = data.length * k;
         int[] newData = new int[newMaxSize];

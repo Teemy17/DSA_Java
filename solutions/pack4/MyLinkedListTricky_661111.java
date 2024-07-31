@@ -31,6 +31,7 @@ public class MyLinkedListTricky_661111 extends MyLinkedList_661111 {
         Node prev = null;
         Node current = head;
         Node next = null;
+
         while (current != null) {
             next = current.next;
             current.next = prev;
@@ -42,6 +43,7 @@ public class MyLinkedListTricky_661111 extends MyLinkedList_661111 {
 
     public void q3_remove_dup() {
         Node p = head;
+
         while (p != null) {
             Node q = p;
             while (q.next != null) {
@@ -59,12 +61,14 @@ public class MyLinkedListTricky_661111 extends MyLinkedList_661111 {
         Node p = head;
         Node prev = null;
         Node temp = null;
+
         while (p != null) {
             if (p.data != 9) {
                 prev = p;
             }
             p = p.next;
         }
+
         if (prev == null) {
             temp = new Node(1);
             temp.next = head;
