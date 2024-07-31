@@ -1,24 +1,30 @@
 package solutions.pack4;
+
 import java.util.*;
 
 public class MyLinkedListTricky_661111 extends MyLinkedList_661111 {
     public void q1_rotate_counter_clockwise(int k) {
-        if (head == null) return;
         Node p = head;
-        int len = 1;
+        int i = 0;
+
+        if (k == 0) return;
+
+        while (i < k - 1 && p.next != null) {
+            p = p.next;
+            i++;
+        }
+
+        if (p == null) return;
+
+        Node newHead = p;
+
         while (p.next != null) {
             p = p.next;
-            len++;
         }
-        p.next = head;
-        k = k % len;
-        k = len - k;
-        while (k-- > 0) {
-            p = p.next;
-        }
-        head = p.next;
-        p.next = null;
 
+        p.next = head;
+        head = newHead.next;
+        newHead.next = null;
     }
 
     public void q2_reverse() {
