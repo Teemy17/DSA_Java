@@ -14,20 +14,20 @@ public class Lab5_RPN_Shunting_Main {
 //        stack.push(3.3);
 //        System.out.println(stack);
 //    }
-//    private static void testTokenizer(String toBeRPN) {
-//        StringTokenizer st = new StringTokenizer(toBeRPN);
-//        int i = 0;
-//        String t = "";
-//        while (st.hasMoreTokens()) {
-//            t = st.nextToken();
-//            if (MyRPN.isNumeric(t))
-//                System.out.println("Token " + i++ + " = " + t);
-//            else
-//                System.out.println("Token " + i++ + " = " + t + " is an opearator");
-//        }
-//    }
+    private static void testTokenizer(String toBeRPN) {
+        StringTokenizer st = new StringTokenizer(toBeRPN);
+        int i = 0;
+        String t = "";
+        while (st.hasMoreTokens()) {
+            t = st.nextToken();
+            if (MyRPN.isNumeric(t))
+                System.out.println("Token " + i++ + " = " + t);
+            else
+                System.out.println("Token " + i++ + " = " + t + " is an opearator");
+        }
+    }
     static void task2(String postfixString) {
-//        testTokenizer(rpn);
+        testTokenizer(postfixString);
         System.out.println(postfixString);
         System.out.println("= " + MyRPN.computeRPN(postfixString));
 
