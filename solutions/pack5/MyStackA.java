@@ -1,8 +1,8 @@
 package solutions.pack5;
 
 public class MyStackA {
-   private int MAX_SIZE = 100;
-   private double[] stack = new double[MAX_SIZE];
+   private final int MAX_SIZE = 100;
+   private final double[] stack = new double[MAX_SIZE];
    private int top = 0;
 
    public void push(double d) {
