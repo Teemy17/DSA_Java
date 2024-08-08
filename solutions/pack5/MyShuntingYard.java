@@ -12,7 +12,7 @@ public class MyShuntingYard {
     }
 
     public static String infixToPostfix(String infixString) {
-        MyQueueListWrap<String> queue = new MyQueueL<>();
+        MyQueueListWrap<String> queue = new MyQueueListWrap<>();
         MyStackL stack = new MyStackL();
         String resultPostfixString = "";
         StringTokenizer st = new StringTokenizer(infixString);
