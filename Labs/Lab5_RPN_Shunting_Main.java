@@ -67,15 +67,15 @@ public class Lab5_RPN_Shunting_Main {
         System.out.println(ans);
     }
     public static void main(String[] args) {
-//        task1();
+        task1();
         // 3 1 - 4 5 + *
-//        String postfixString = "8 5 - 4 2 + 3 / *";
-//        task2(postfixString);
-//        task4();
+        String postfixString = "8 5 - 4 2 + 3 / *";
+        task2(postfixString);
+        task4();
         String infixString = "( 4 + 2 ) / 3 * ( 8 - 5 )";
         //expect 4 2 + 3 / 8 5 - *
-        // if (args.length > 0)
-        //     infixString = args[0];
+         if (args.length > 0)
+             infixString = args[0];
         computeInfix(infixString);
     }
 }
