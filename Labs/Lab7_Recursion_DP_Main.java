@@ -30,7 +30,7 @@ public class Lab7_Recursion_DP_Main {
         System.out.println("using recursive method");
         Subsets.printAllSubsets_Recurse(set);
         System.out.println("using dynamic programming method");
-//        Subsets.printAllSubsets_DP(set);
+        Subsets.printAllSubsets_DP(set);
     }
     static void testGridPaths() {
         int [][] grid = { {0,0,0,0},
