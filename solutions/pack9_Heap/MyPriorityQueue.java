@@ -1,7 +1,7 @@
 package solutions.pack9_Heap;
 
-public class MyPriorityQueue_661111 implements MyQueueInterface {
-    MyMinHeap_661111 heap = new MyMinHeap_661111();
+public class MyPriorityQueue implements MyQueueInterface {
+    MyMinHeap heap = new MyMinHeap();
 
     @Override
     public void enqueue(int d) {

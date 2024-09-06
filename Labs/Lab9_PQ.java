@@ -2,9 +2,9 @@ package Labs;
 
 import java.util.ArrayList;
 
-import solutions.pack9_Heap.MyHeapSort_661111;
-import solutions.pack9_Heap.MyMinHeap_661111;
-import solutions.pack9_Heap.MyPriorityQueue_661111;
+import solutions.pack9_Heap.MyHeapSort;
+import solutions.pack9_Heap.MyMinHeap;
+import solutions.pack9_Heap.MyPriorityQueue;
 
 public class Lab9_PQ {
     static ArrayList<Integer> least3;
@@ -18,7 +18,7 @@ public class Lab9_PQ {
     }
     static void task1() {
         least3 = new ArrayList<>();
-        MyMinHeap_661111 heap = new MyMinHeap_661111();
+        MyMinHeap heap = new MyMinHeap();
         heap.insert(11);
         heap.insert(15);
         heap.insert(16);
@@ -33,7 +33,7 @@ public class Lab9_PQ {
     }
     static void task2() {
         least3 = new ArrayList<>();
-        MyPriorityQueue_661111 pq = new MyPriorityQueue_661111();
+        MyPriorityQueue pq = new MyPriorityQueue();
         pq.enqueue(11);
         pq.enqueue(15);
         pq.enqueue(16);
@@ -51,7 +51,7 @@ public class Lab9_PQ {
         System.out.println("least 3 value is " + least3);
     }
     static void task3() {
-        MyHeapSort_661111 heap = new MyHeapSort_661111();
+        MyHeapSort heap = new MyHeapSort();
         heap.insert(11);
         heap.insert(15);
         heap.insert(16);

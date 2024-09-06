@@ -1,6 +1,6 @@
 package solutions.pack9_Heap;
 
-public class MyMinHeap_661111 {
+public class MyMinHeap {
     int MAX_SIZE = 6;
     int heap[] = new int[MAX_SIZE];
     int size = 0;

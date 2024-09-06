@@ -1,6 +1,6 @@
 package solutions.pack9_Heap;
 
-public class MyHeapSort_661111 extends MyMinHeap_661111 {
+public class MyHeapSort extends MyMinHeap {
 
     public String sort() {
         StringBuilder sb = new StringBuilder();
