@@ -8,7 +8,10 @@ public class TreeNode {
         data = d;
     }
 
-    public String to_String() {
-        return "null<-" + data + "->null";
+    @Override
+    public String toString() {
+        String leftData = left == null ? "null" : String.valueOf(left.data);
+        String rightData = right == null ? "null" : String.valueOf(right.data);
+        return leftData + " <- " + data + " -> " + rightData;
     }
 }
