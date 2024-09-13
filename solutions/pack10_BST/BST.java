@@ -101,7 +101,6 @@ public class BST {
         if (node == null) return;
         printInOrderRecursive(node.left);
         System.out.print(node.data + " ");
-        System.out.println();
         printInOrderRecursive(node.right);
     }
 
