@@ -28,10 +28,44 @@ public class NetworkOptimizer {
          * The algorithm should return the total latency of the minimum spanning tree
          */
 
-        Node starNode = nodes[0];
+        Node startNode = nodes[0];
         PriorityQueue<Edge> pq = new PriorityQueue<>(new EdgeComparator());
 
         // implement the algorithm here
+        Set<Node> visited = new HashSet<>();
+
+        visited.add(startNode);
+        pq.addAll(startNode.getEdges());
+
+        // Prim's algorithm loop
+        while (!pq.isEmpty() && visited.size() < N) {
+            Edge currentEdge = pq.poll();
+            Node node1 = currentEdge.node1;
+            Node node2 = currentEdge.node2;
+
+            // Check if we can add this edge to the MST (i.e., one node is unvisited)
+            if (visited.contains(node1) && visited.contains(node2)) {
+                continue; // Both nodes already visited, skip this edge
+            }
+
+            // Add the edge to the MST
+            totalLatency += currentEdge.latency;
+
+            // Determine which node is unvisited and add its edges to the queue
+            Node newNode = visited.contains(node1) ? node2 : node1;
+            visited.add(newNode);
+
+            for (Edge edge : newNode.getEdges()) {
+                if (!visited.contains(edge.getOtherNode(newNode))) {
+                    pq.add(edge);
+                }
+            }
+        }
+
+        // If not all nodes were visited, the graph is disconnected, return -1
+        if (visited.size() < N) {
+            return -1;
+        }
 
         return totalLatency;
 
@@ -69,12 +103,12 @@ public class NetworkOptimizer {
 //         */
 
         // implement algorithm here
-        Node starNode = nodes[0];
+        Node startNode = nodes[0];
         PriorityQueue<EdgeWithBandwidth> pq = new PriorityQueue<>(new EdgeWithBandwidthComparator());
         Set<Node> visited = new HashSet<>();
 
-        visited.add(starNode);
-        pq.addAll(starNode.getEdgesWithBandwidth());
+        visited.add(startNode);
+        pq.addAll(startNode.getEdgesWithBandwidth());
 
         while (!pq.isEmpty()) {
             EdgeWithBandwidth currentEdgeWithBandwidth = pq.poll();
@@ -99,5 +133,4 @@ public class NetworkOptimizer {
         }
         return totalLatency;
     }
-
 }
