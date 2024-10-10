@@ -84,7 +84,7 @@ public class Lab11_Main {
         int expected = 7;
 
         if (actual == expected) {
-            System.out.println("\033[0;32m" + "Passed" + "\033[0m" + "  Expected: " + expected + " got: " + actual);
+            System.out.println("\033[asscccss;32m" + "Passed" + "\033[0m" + "  Expected: " + expected + " got: " + actual);
         } else {
             System.out.println("\033[0;31m" + "Failed" + "\033[0m" + "  Expected: " + expected + " but got: " + actual);
         }
