@@ -13,7 +13,7 @@ public class Lab12b_SSP {
         task2();
 
         System.out.println("\nTask 3:");
-//        task3();
+        task3();
         System.out.println("bye");
 
     }
@@ -82,45 +82,44 @@ public class Lab12b_SSP {
          */
     }
 
-//    public static void task3() {
-//        Task3 task3 = new Task3();
-//
-//        int[] initialState1 = { 6, 3, 2, 5, 4, 1 };
-//        int[] goalState1 = { 1, 2, 3, 4, 5, 6 };
-//        int expectedOutput1 = 3;
-//
-//        int[] initialState2 = {3, 4, 2, 1};
-//        int[] goalState2 = {1, 2, 3, 4};
-//        int expectedOutput2 = -1;
-//
-//        int[] initialState3 = {1, 2, 3, 4};
-//        int[] goalState3 = {1, 2, 3, 4};
-//        int expectedOutput3 = 0;
-//
-//        int actualOutput1 = task3.stateSpace(initialState1, goalState1);
-//        int actualOutput2 = task3.stateSpace(initialState2, goalState2);
-//        int actualOutput3 = task3.stateSpace(initialState3, goalState3);
-//
-//        if (actualOutput1 == expectedOutput1) {
-//            System.out.println("\033[0;32m" + "Passed" + "\033[0m" + "  Expected: " + expectedOutput1 + " got: " + actualOutput1);
-//        }
-//        else {
-//            System.out.println("\033[0;31m" + "Failed" + "\033[0m" + "  Expected: " + expectedOutput1 + " but got: " + actualOutput1);
-//        }
-//
-//        if (actualOutput2 == expectedOutput2) {
-//            System.out.println("\033[0;32m" + "Passed" + "\033[0m" + "  Expected: " + expectedOutput2 + " got: " + actualOutput2);
-//        }
-//        else {
-//            System.out.println("\033[0;31m" + "Failed" + "\033[0m" + "  Expected: " + expectedOutput2 + " but got: " + actualOutput2);
-//        }
-//
-//        if (actualOutput3 == expectedOutput3) {
-//            System.out.println("\033[0;32m" + "Passed" + "\033[0m" + "  Expected: " + expectedOutput3 + " got: " + actualOutput3);
-//        }
-//        else {
-//            System.out.println("\033[0;31m" + "Failed" + "\033[0m" + "  Expected: " + expectedOutput3 + " but got: " + actualOutput3);
-//        }
-//    }
+    public static void task3() {
+        Task3 task3 = new Task3();
 
+        int[] initialState1 = { 6, 3, 2, 5, 4, 1 };
+        int[] goalState1 = { 1, 2, 3, 4, 5, 6 };
+        int expectedOutput1 = 3;
+
+        int[] initialState2 = {3, 4, 2, 1};
+        int[] goalState2 = {1, 2, 3, 4};
+        int expectedOutput2 = -1;
+
+        int[] initialState3 = {1, 2, 3, 4};
+        int[] goalState3 = {1, 2, 3, 4};
+        int expectedOutput3 = 0;
+
+        int actualOutput1 = task3.stateSpace(initialState1, goalState1);
+        int actualOutput2 = task3.stateSpace(initialState2, goalState2);
+        int actualOutput3 = task3.stateSpace(initialState3, goalState3);
+
+        if (actualOutput1 == expectedOutput1) {
+            System.out.println("\033[0;32m" + "Passed" + "\033[0m" + "  Expected: " + expectedOutput1 + " got: " + actualOutput1);
+        }
+        else {
+            System.out.println("\033[0;31m" + "Failed" + "\033[0m" + "  Expected: " + expectedOutput1 + " but got: " + actualOutput1);
+        }
+
+        if (actualOutput2 == expectedOutput2) {
+            System.out.println("\033[0;32m" + "Passed" + "\033[0m" + "  Expected: " + expectedOutput2 + " got: " + actualOutput2);
+        }
+        else {
+            System.out.println("\033[0;31m" + "Failed" + "\033[0m" + "  Expected: " + expectedOutput2 + " but got: " + actualOutput2);
+        }
+
+        if (actualOutput3 == expectedOutput3) {
+            System.out.println("\033[0;32m" + "Passed" + "\033[0m" + "  Expected: " + expectedOutput3 + " got: " + actualOutput3);
+        }
+        else {
+            System.out.println("\033[0;31m" + "Failed" + "\033[0m" + "  Expected: " + expectedOutput3 + " but got: " + actualOutput3);
+        }
+    }
 }
